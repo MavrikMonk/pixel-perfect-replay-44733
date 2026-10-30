@@ -18,7 +18,7 @@ import { UploadStep, type RoomPhoto } from "./UploadStep";
 
 type Action = { kind: "generate" } | { kind: "refine"; text: string };
 
-function StepHeader({ n, title, hint }: { n: number; title: string; hint?: string }) {
+function StepHeader({ n, title, hint }: { n: number; title: string; hint?: string | undefined }) {
   return (
     <div className="mb-6 flex items-start gap-4">
       <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-charcoal font-display text-base text-charcoal-foreground">
